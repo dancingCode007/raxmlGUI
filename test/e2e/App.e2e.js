@@ -10,7 +10,7 @@ const assertNoConsoleErrors = async t => {
 };
 
 fixture`Entry Page tests`
-  .page('../../app/app.html?mainWindow')
+  .page('../../build/index.html')
   .afterEach(assertNoConsoleErrors);
 
 test(
@@ -22,7 +22,7 @@ test('should open window', async t => {
   await t.expect(getPageTitle()).eql('raxmlGUI2');
 });
 
-test.only('load an alignment', async t => {
+test('load an alignment', async t => {
   await waitForReact();
 
   await setElectronDialogHandler((type, browserWindow, options) => {
