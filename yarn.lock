@@ -2652,6 +2652,11 @@ bionode-fasta@^0.5.6:
     split2 "^2.1.1"
     through2 "~2.0.3"
 
+bionode-seq@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/bionode-seq/-/bionode-seq-0.1.1.tgz#76cad820b3bb8eaaaab93fcdf175ce2288693828"
+  integrity sha1-dsrYILO7jqqquT/N8XXOIohpOCg=
+
 bl@^0.9.0:
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/bl/-/bl-0.9.5.tgz#c06b797af085ea00bc527afc8efcf11de2232054"
@@ -5026,13 +5031,6 @@ filenamify@^4.1.0:
     strip-outer "^1.0.1"
     trim-repeated "^1.0.0"
 
-fileset@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/fileset/-/fileset-2.0.3.tgz#8e7548a96d3cc2327ee5e674168723a333bba2a0"
-  dependencies:
-    glob "^7.0.3"
-    minimatch "^3.0.3"
-    
 filesize@3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/filesize/-/filesize-3.6.1.tgz#090bb3ee01b6f801a8a8be99d31710b3422bb317"
