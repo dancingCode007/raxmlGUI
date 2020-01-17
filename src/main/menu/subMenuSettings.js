@@ -1,3 +1,7 @@
+import { BrowserWindow } from 'electron';
+
+import * as ipc from "../../constants/ipc";
+
 const subMenuSettings = {
   label: 'Settings',
   submenu: [
@@ -6,6 +10,7 @@ const subMenuSettings = {
       type: 'checkbox',
       check: false,
       click() {
+        BrowserWindow.getFocusedWindow().webContents.send(ipc.TOGGLE_LIGHT_MODE);
       }
     },
   ]
