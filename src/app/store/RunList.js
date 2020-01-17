@@ -6,6 +6,7 @@ import StoreBase from './StoreBase';
 class RunList extends StoreBase {
   @observable runs = [];
   @observable activeIndex = 0;
+  @observable lightMode = false;
 
   constructor() {
     super();
@@ -59,8 +60,14 @@ class RunList extends StoreBase {
     this.error = error;
   };
 
+  @action
+  onLightModeToggle = (event, params) => {
+    this.lightMode = !this.lightMode;
+  };
+
   listen = () => {
     this.listenTo(ipc.UNHANDLED_ERROR, this.onError);
+    this.listenTo(ipc.TOGGLE_LIGHT_MODE, this.onLightModeToggle);
   }
 
   generateReport = ({ maxStdoutLength = 200 } = {}) => {
